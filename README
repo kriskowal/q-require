@@ -1,0 +1,62 @@
+
+Q-REQUIRE
+
+Asynchronous CommonJS require module loader for Node and browsers.
+
+The browser implementation is good for development where the
+JavaScript is hosted on the same domain of origin as the page, for
+live debugging.  For production, it is generally preferable to build
+a module transport bundle and to put it on a CDN.
+
+
+Implements:
+
+    http://wiki.commonjs.org/wiki/Modules/1.1.1
+    http://wiki.commonjs.org/wiki/Modules/Async/A
+
+Node:
+
+    $ npm install q-require
+
+    var REQUIRE = require("require/require");
+    var LOADER = require("require/loader");
+
+    // construct a require()
+    var loader = LOADER.Loader({"paths": [__dirname + "/package/"]});
+    var require2 = REQUIRE.Require({"loader": loader});
+
+    // load the main module, asynchronously
+    var promise = require2.exec("main");
+
+    var Q = require("q");
+    Q.when(promise, function (main) {
+        // ok
+    }, function (reason) {
+        // error
+    });
+
+Browser:
+
+    <script src="require.min.js"></script>
+    <script>
+        require = Require("path/to/js");
+        // async require a main module
+        require.exec("main");
+        // or
+        require.ensure(["foo", "bar", "baz"], function (require) {
+            var FOO = require("foo");
+            var BAR = require("bar");
+            var BAZ = require("baz");
+        });
+    </script>
+
+
+This asynchronous loader uses a simple heuristic for analyzing
+dependencies; it reads all require calls with string literals.
+You'll need to trick the regular expression if you have require
+calls that do not imply static dependency, like require((id)).
+If you have a dynamic dependency, use require.ensure or
+require.exec to asynchronously advance require to include
+additional modules and their transitive dependencies.
+
+
