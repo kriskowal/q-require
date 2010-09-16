@@ -18,21 +18,24 @@ Node:
 
     $ npm install q-require
 
-    var REQUIRE = require("require/require");
-    var LOADER = require("require/loader");
+    var REQUIRE = require("q-require/require");
+    var LOADER = require("q-require/loader");
 
     // construct a require()
-    var loader = LOADER.Loader({"paths": [__dirname + "/package/"]});
+    var loader = LOADER.Loader({"paths": [__dirname + "/examples/package/"]});
     var require2 = REQUIRE.Require({"loader": loader});
 
     // load the main module, asynchronously
     var promise = require2.exec("main");
 
     var Q = require("q");
+    var SYS = require("sys");
     Q.when(promise, function (main) {
         // ok
+        SYS.puts(main);
     }, function (reason) {
         // error
+        SYS.puts(SYS.inspect(reason));
     });
 
 Browser:
