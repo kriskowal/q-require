@@ -1,0 +1,24 @@
+{
+    "name": "q-require",
+    "description": "asynchronous CommonJS require module loader for Node and browsers",
+    "version": "0.0.0",
+    "implements": [
+        "CommonJS/Modules/1.1.1",
+        "CommonJS/Modules/Async/A"
+    ],
+    "homepage": "http://github.com/kriskowal/q-require/",
+    "author": "Kris Kowal <kris@cixar.com> (http://github.com/kriskowal/)",
+    "bugs": {
+        "mail": "kris@cixar.com",
+        "web": "http://github.com/kriskowal/q-require/issues"
+    },
+    "dependencies": {
+        "q": "0.0.0"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://github.com/kriskowal/q-require/raw/master/LICENSE"
+        }
+    ]
+}

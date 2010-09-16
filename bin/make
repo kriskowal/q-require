@@ -1,0 +1,8 @@
+#!/bin/bash
+cat \
+	../es5-shim/es5-shim.js \
+	../q/q.js \
+	engines/browser/lib/{module,http,q-http,loader}.js \
+    lib/require.js \
+    engines/browser/lib/main.js \
+> require.js

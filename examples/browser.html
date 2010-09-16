@@ -1,0 +1,8 @@
+<script src="../require.min.js"></script>
+<script>
+    require = Require("package");
+    var Q = require("q");
+    Q.when(require.exec("main"), function (main) {
+        document.body.innerHTML = '' + main;
+    });
+</script>
