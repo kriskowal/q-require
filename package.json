@@ -1,7 +1,7 @@
 {
     "name": "q-require",
     "description": "asynchronous CommonJS require module loader for Node and browsers",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "implements": [
         "CommonJS/Modules/1.1.1",
         "CommonJS/Modules/Async/A"
@@ -14,7 +14,8 @@
     },
     "dependencies": {
         "q": "0.0.0",
-        "es5-shim": "0.0.0"
+        "es5-shim": "0.0.0",
+        "q-fs": "0.0.0"
     },
     "directories": {
         "lib": "./lib"
