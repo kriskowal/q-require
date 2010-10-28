@@ -11,8 +11,9 @@ a module transport bundle and to put it on a CDN.
 
 Implements:
 
-    http://wiki.commonjs.org/wiki/Modules/1.1.1
-    http://wiki.commonjs.org/wiki/Modules/Async/A
+ * http://wiki.commonjs.org/wiki/Modules/1.1.1
+ * http://wiki.commonjs.org/wiki/Modules/Async/A
+
 
 Node:
 
@@ -62,4 +63,14 @@ If you have a dynamic dependency, use require.ensure or
 require.exec to asynchronously advance require to include
 additional modules and their transitive dependencies.
 
+require.min.js includes ECMAScript 5 shims, so more Object, Array,
+String, and Date functions are guaranteed to work.  It also
+bootstraps require with the following modules:
+
+ * q
+ * require/http
+ * require/q-http
+ * require/module
+ * require/loader
+ * require/require
 

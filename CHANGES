@@ -1,0 +1,15 @@
+
+0.0.3
+ - added CHANGES
+ - linked package.json to github repository
+
+0.0.2
+ - npm package and demos work
+
+0.0.1
+ - added ES 5 shim dependency
+ - added README
+
+0.0.0
+ - browser implementation works
+

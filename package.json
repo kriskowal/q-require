@@ -1,7 +1,7 @@
 {
     "name": "q-require",
     "description": "asynchronous CommonJS require module loader for Node and browsers",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "implements": [
         "CommonJS/Modules/1.1.1",
         "CommonJS/Modules/Async/A"
@@ -14,7 +14,7 @@
     },
     "dependencies": {
         "q": "0.0.0",
-        "es5-shim": "0.0.0",
+        "es5-shim": "0.0.1",
         "q-fs": "0.0.0"
     },
     "directories": {
@@ -30,5 +30,12 @@
             "type": "MIT",
             "url": "http://github.com/kriskowal/q-require/raw/master/LICENSE"
         }
-    ]
+    ],
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/kriskowal/q-require.git"
+    },
+    "engines": {
+        "node": ">=0.2.0"
+    }
 }
