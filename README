@@ -30,7 +30,7 @@ Node:
     var promise = require2.exec("main");
 
     var Q = require("q");
-    var SYS = require("sys");
+    var SYS = require('util');
     Q.when(promise, function (main) {
         // ok
         SYS.puts(main);
