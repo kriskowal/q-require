@@ -1,7 +1,7 @@
 {
     "name": "q-require",
-    "description": "asynchronous CommonJS require module loader for Node and browsers",
-    "version": "0.0.3",
+    "version": "0.0.4",
+    "description": "(out-of-service) asynchronous CommonJS require module loader for Node and browsers",
     "implements": [
         "CommonJS/Modules/1.1.1",
         "CommonJS/Modules/Async/A"
